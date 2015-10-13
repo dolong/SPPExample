@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+    <title>Infusion WP Theme</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	  <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+		<header class="clearfix">
+		    <div class="logo col-md-3"><h2 class="logo-text">SPP</h2></div>
+		    <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="#" class="active">Intro</a></li>
+                <li><a href="calculator.html">Calculator Example</a></li>
+            </ul>
+        </nav>
+        <div class="pullcontainer">
+        <a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>
+        </div>     
+		</header>
+    
+    <div class="text-inter">
+    <div class="container">
+      <div class="row">
+        <div class="main">
+            
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$MainContent$ScriptManager1', 'ctl03', ['tctl00$MainContent$upMain','MainContent_upMain'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="pageHeading">        
+        SELECT MY STRATEGIES
+        <div style="float:right;"><a id="MainContent_lnkNext" href="CustomizeMyStrategies.aspx">Next &gt;&gt;</a></div>
+    </div>
+    <div style="width: 100%; height: 20px; margin-top: 10px;">
+        <div style="width:100%;float:left;">
+            Select Year
+            <select name="ctl00$MainContent$lstYear" id="MainContent_lstYear" style="font-family:Calibri;width:107px;">
+	<option value="2013">2013</option>
+	<option value="2014">2014</option>
+	<option selected="selected" value="2015">2015</option>
+	<option value="2016">2016</option>
+	<option value="2017">2017</option>
+
+</select>           
+            <input type="submit" name="ctl00$MainContent$btnRefresh" value="Show" id="MainContent_btnRefresh" style="width:107px;">
+            <input type="submit" name="ctl00$MainContent$btnSave" value="Save &amp; Calculate" id="MainContent_btnSave" style="width:130px;">
+        </div>
+        
+    </div>
+    <div id="MainContent_pnlMain">
+	        
+        <div id="MainContent_upMain">
+		
+                <div style="text-align: center; width: 100%; padding-top: 10px; font-size: 14px;">
+                    <span id="MainContent_lblStatus" style="color:Red;font-weight:bold;"></span>
+                </div>
+                <br>
+                <br>
+                <table style="width: 100%;">
+                    <tbody><tr>
+                        <td style="width: 100%; vertical-align: top;">
+                            <div>
+			<table cellspacing="0" cellpadding="4" id="MainContent_gvStrategyList" style="color:#333333;font-family:Calibri;width:100%;border-collapse:collapse;margin-right: 0px">
+				<tbody><tr align="left" style="color:White;background-color:#5D7B9D;font-weight:bold;">
+					<th scope="col">Selected</th><th align="center" scope="col">Strategy</th><th scope="col">&nbsp;</th><th align="center" scope="col">
+                                            Strategy Statement
+                                        </th><th scope="col">&nbsp;</th>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl02$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_0" value="31731">
+                                            <input id="MainContent_gvStrategyList_cbSelected_0" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl02$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl02$txtStrategy" type="text" value="Assessing Your Business" id="MainContent_gvStrategyList_txtStrategy_0" class="gridstringbox" style="font-family: Calibri; cursor: auto; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;" autocomplete="off">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl02$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_0" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl03$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_1" value="31732">
+                                            <input id="MainContent_gvStrategyList_cbSelected_1" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl03$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl03$txtStrategy" type="text" value="Behaviour Management" id="MainContent_gvStrategyList_txtStrategy_1" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl03$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_1" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl04$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_2" value="31733">
+                                            <input id="MainContent_gvStrategyList_cbSelected_2" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl04$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl04$txtStrategy" type="text" value="Buyer Process" id="MainContent_gvStrategyList_txtStrategy_2" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl04$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_2" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl05$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_3" value="31734">
+                                            <input id="MainContent_gvStrategyList_cbSelected_3" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl05$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl05$txtStrategy" type="text" value="Cash Management" id="MainContent_gvStrategyList_txtStrategy_3" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl05$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_3" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl06$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_4" value="31735">
+                                            <input id="MainContent_gvStrategyList_cbSelected_4" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl06$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl06$txtStrategy" type="text" value="Client Appreciation Events" id="MainContent_gvStrategyList_txtStrategy_4" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl06$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_4" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl07$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_5" value="31736">
+                                            <input id="MainContent_gvStrategyList_cbSelected_5" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl07$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl07$txtStrategy" type="text" value="Closing &amp; Post Sale Follow Up" id="MainContent_gvStrategyList_txtStrategy_5" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl07$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_5" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl08$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_6" value="31737">
+                                            <input id="MainContent_gvStrategyList_cbSelected_6" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl08$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl08$txtStrategy" type="text" value="Expired Listing" id="MainContent_gvStrategyList_txtStrategy_6" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl08$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_6" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl09$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_7" value="31738">
+                                            <input id="MainContent_gvStrategyList_cbSelected_7" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl09$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl09$txtStrategy" type="text" value="Farming" id="MainContent_gvStrategyList_txtStrategy_7" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl09$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_7" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl10$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_8" value="31739">
+                                            <input id="MainContent_gvStrategyList_cbSelected_8" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl10$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl10$txtStrategy" type="text" value="For Sale By Owner" id="MainContent_gvStrategyList_txtStrategy_8" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl10$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_8" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl11$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_9" value="31740">
+                                            <input id="MainContent_gvStrategyList_cbSelected_9" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl11$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl11$txtStrategy" type="text" value="Handling Leads" id="MainContent_gvStrategyList_txtStrategy_9" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl11$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_9" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl12$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_10" value="31741">
+                                            <input id="MainContent_gvStrategyList_cbSelected_10" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl12$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl12$txtStrategy" type="text" value="Lead Follow Up" id="MainContent_gvStrategyList_txtStrategy_10" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl12$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_10" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl13$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_11" value="31742">
+                                            <input id="MainContent_gvStrategyList_cbSelected_11" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl13$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl13$txtStrategy" type="text" value="Networking" id="MainContent_gvStrategyList_txtStrategy_11" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl13$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_11" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl14$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_12" value="31743">
+                                            <input id="MainContent_gvStrategyList_cbSelected_12" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl14$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl14$txtStrategy" type="text" value="Open House" id="MainContent_gvStrategyList_txtStrategy_12" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl14$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_12" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl15$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_13" value="31744">
+                                            <input id="MainContent_gvStrategyList_cbSelected_13" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl15$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl15$txtStrategy" type="text" value="Profitability Contact List" id="MainContent_gvStrategyList_txtStrategy_13" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl15$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_13" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl16$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_14" value="31745">
+                                            <input id="MainContent_gvStrategyList_cbSelected_14" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl16$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl16$txtStrategy" type="text" value="Profitability Roadmap" id="MainContent_gvStrategyList_txtStrategy_14" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl16$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_14" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl17$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_15" value="31746">
+                                            <input id="MainContent_gvStrategyList_cbSelected_15" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl17$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl17$txtStrategy" type="text" value="Seller Process" id="MainContent_gvStrategyList_txtStrategy_15" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl17$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_15" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl18$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_16" value="31747">
+                                            <input id="MainContent_gvStrategyList_cbSelected_16" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl18$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl18$txtStrategy" type="text" value="Seminars" id="MainContent_gvStrategyList_txtStrategy_16" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl18$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_16" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl19$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_17" value="31748">
+                                            <input id="MainContent_gvStrategyList_cbSelected_17" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl19$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl19$txtStrategy" type="text" value="Social Media" id="MainContent_gvStrategyList_txtStrategy_17" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl19$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_17" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#333333;background-color:#F7F6F3;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl20$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_18" value="31749">
+                                            <input id="MainContent_gvStrategyList_cbSelected_18" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl20$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl20$txtStrategy" type="text" value="Website" id="MainContent_gvStrategyList_txtStrategy_18" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl20$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_18" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:#284775;background-color:#D8D8D8;">
+					<td style="width:2%;">
+                                            <input type="hidden" name="ctl00$MainContent$gvStrategyList$ctl21$KPIStrategiesStrategyListId" id="MainContent_gvStrategyList_KPIStrategiesStrategyListId_19">
+                                            <input id="MainContent_gvStrategyList_cbSelected_19" type="checkbox" name="ctl00$MainContent$gvStrategyList$ctl21$cbSelected" checked="checked">                                            
+                                        </td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl21$txtStrategy" type="text" id="MainContent_gvStrategyList_txtStrategy_19" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:5%;">&nbsp;</td><td align="left" style="width:40%;">
+                                            <input name="ctl00$MainContent$gvStrategyList$ctl21$txtStrategyStatement" type="text" id="MainContent_gvStrategyList_txtStrategyStatement_19" class="gridstringbox" style="font-family:Calibri;">
+                                        </td><td style="width:7%;">&nbsp;</td>
+				</tr><tr style="color:White;background-color:#5D7B9D;font-weight:bold;">
+					<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                            <input type="submit" name="ctl00$MainContent$gvStrategyList$ctl22$btnAddNewRow" value="Add new row" id="MainContent_gvStrategyList_btnAddNewRow" style="font-family:Calibri;">
+                                        </td>
+				</tr>
+			</tbody></table>
+		</div>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <div id="MainContent_progressAddRow" style="display:none;" role="status" aria-hidden="true">
+			
+                        <img id="MainContent_imgProgressAddRow" src="Images/loading.gif" style="height:39px;width:60px;">
+                    
+		</div>
+                
+            
+	</div>
+    
+</div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="h2-wrap">
+      <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+          <h2 class="standard-block">LATEST ARTICLES</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid container-articles">
+      <div class="row articles">
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/01.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/02.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/03.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/04.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/05.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/06.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+      </div>
+      <div class="row articles">
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/07.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/08.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/09.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/10.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/11.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+        <div class="col-md-2 article-img">
+          <a href="#"><img src="img/articles/12.jpg" alt=""></a>
+          <div class="article-overlay"></div>
+        </div>
+      </div>
+    </div>
+    <div class="laptop-slider">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 laptop-placeholder">
+        <div class="slideshow">
+        <figure class="show"><img alt="" src="img/slider/slide-01.png" /></figure>
+        <figure><img alt="" src="img/slider/slide-02.png" /></figure>
+        <figure><img alt="" src="img/slider/slide-01.png" /></figure>
+        <figure><img alt="" src="img/slider/slide-02.png" /></figure>
+        <span class="prev"><i class="fa fa-angle-left fa-4x"></i></span>
+        <span class="next"><i class="fa fa-angle-right fa-4x"></i></span>
+        </div>
+        </div>
+        <div> 
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="quote-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="quote-slideshow">
+              <figure class="show"><h2>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. </h2>
+              <figcaption>
+                Nam mi enim, auctor non ultricies.
+              </figcaption>
+              </figure>
+              <figure><h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</h2>
+              <figcaption>
+                Nam mi enim, auctor.
+              </figcaption>
+              </figure>
+            </div>
+            </div>
+            <span class="quote-prev circle"><i class="fa fa-angle-left fa-2x"></i></span>
+            <span class="quote-next circle"><i class="fa fa-angle-right fa-2x"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shadow"></div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <h2>INFUSION</h2>
+          </div>
+          <div class="col-md-5">
+            <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+          </div>
+          <div class="col-md-3">
+            <p>aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+          </div>
+          <div class="col-md-2">
+            <ul class="footer-links">
+              <li><a href="#">List One</a></li>
+              <li><a href="#">Page Two</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Contact Me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/unslider.min.js"></script>
+  </body>
+</html>
